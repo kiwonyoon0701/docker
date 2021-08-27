@@ -15,12 +15,16 @@ docker run hello-world
 
 ```
 
+**Docker Run Test**
+
 ```
 ubuntu@ip-172-31-52-63:/home/ubuntu> docker run -dt --name ubuntu01 ubuntu bash
 ubuntu@ip-172-31-52-63:/home/ubuntu> docker exec -it ubuntu01 bash
 root@a92c674be00e:/# ls
 
 ```
+
+**nginx 시작 및 기본 동작 curl local**
 
 ```
 ubuntu@ip-172-31-52-63:/home/ubuntu> docker run -dt -it --name web01 alpine
@@ -91,6 +95,8 @@ curl: (7) Failed to connect to 3.38.44.138 port 80: Connection refused
 
 ```
 
+**web-base image생성 및 internect access**
+
 ```
 ubuntu@ip-172-31-52-63:/home/ubuntu> docker commit web01 web-base
 ubuntu@ip-172-31-52-63:/home/ubuntu> docker images
@@ -112,6 +118,8 @@ Welcome to the world!!
 
 
 ```
+
+**Node image 생성 및 실행 **
 
 ```
 ubuntu@ip-172-31-52-63:/home/ubuntu> wget --content-disposition 'https://github.com/linuxacademy/content-Introduction-to-Containers-and-Docker/raw/master/lessonfiles/demo-app.tar'
@@ -209,6 +217,8 @@ kiwony@kiwonymac.com:/Users/kiwony> curl 3.38.44.138:8080
 
 ```
 
+**dockerhub login 및 upload image**
+
 ```
 ubuntu@ip-172-31-52-63:/home/ubuntu/app> docker login --username=kiwonyoon0701
 Password:
@@ -229,6 +239,8 @@ node                     10-alpine   aa67ba258e18   4 months ago     82.7MB
 ubuntu@ip-172-31-52-63:/home/ubuntu/app> docker push kiwonyoon0701/demo-app
 
 ```
+
+**v2 docker 생성 및 upload & deploy**
 
 ```
 ubuntu@ip-172-31-52-63:/home/ubuntu/app/views> vi index.ejs
