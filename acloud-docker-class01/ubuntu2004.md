@@ -119,7 +119,7 @@ Welcome to the world!!
 
 ```
 
-**Node image 생성 및 실행 **
+**Node image 생성 및 실행**
 
 ```
 ubuntu@ip-172-31-52-63:/home/ubuntu> wget --content-disposition 'https://github.com/linuxacademy/content-Introduction-to-Containers-and-Docker/raw/master/lessonfiles/demo-app.tar'
